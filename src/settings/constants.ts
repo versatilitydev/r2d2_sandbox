@@ -23,8 +23,24 @@ export type HashFile = {
   id: number;
   file_name: string;
   file_hash: string;
+  vendor: string;
+  version: string;
+  language: string;
+  edition: string;
+  update: string;
+  product: string;
+  checked: boolean;
 };
 
+export interface IFormInput {
+  vendor: string;
+  product: string;
+  version: string;
+  update: string;
+  edition: string;
+  language: string;
+  file: FileList;
+}
 export type AddNotificationData = {
   title: string;
   description: string;

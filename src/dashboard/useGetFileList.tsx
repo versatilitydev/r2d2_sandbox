@@ -6,5 +6,6 @@ export function useGetFiles() {
     queryKey: ["files"],
     queryFn: () => apigetAllFiles(),
   });
+  console.log(data);
   return { isLoading, data, error };
 }

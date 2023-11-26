@@ -19,7 +19,7 @@ const NavBar = () => {
 
   const [navigation, setNavigation] = useState([
     { name: "Dashboard", href: "Dashboard", current: true },
-    { name: "Calculator", href: "Calculator", current: false },
+    { name: "Components", href: "Components", current: false },
     { name: "Sandbox", href: "Sandbox", current: false },
     { name: "Sandbox2", href: "Sandbox2", current: false },
     { name: "Sandbox3", href: "Sandbox3", current: false },

@@ -1,4 +1,3 @@
-import FileUpload from "./utils/CalculateHash";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "./index.css";
@@ -9,7 +8,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/navigation/NavigationBar";
 import Page404 from "./components/general/Page404";
 import MainWrapper from "./components/general/MainWrapper";
-import FileTable from "./dashboard/FileList";
+import Components from "./components/FileList/Components";
+import FileUpload from "./utils/CalculateHash";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -29,8 +29,8 @@ function App() {
           <NavBar />
           <MainWrapper>
             <Routes>
-              <Route path="/Dashboard" element={<FileTable />} />
-              <Route path="/Calculator" element={<FileUpload />} />
+              <Route path="/Components" element={<Components />} />
+              <Route path="/Components/addComponent" element={<FileUpload />} />
               <Route path="*" element={<Page404 />} />
             </Routes>
           </MainWrapper>
